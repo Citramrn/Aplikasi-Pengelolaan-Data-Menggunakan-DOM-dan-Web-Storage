@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0b4314fc;
+}
+
+.app {
+    width: min(100% - 2rem, 800px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type=text], input[type=number] {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+
+.book-app,
+.read-unread-book {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.form-book-container,
+.left-book,
+.right-book {
+    padding: 1rem;
+    background: #fff;
+    border-radius: 1rem;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+.form-book-container {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.title-book {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.form-group-input {
+    position: relative;
+    margin-bottom: 0.75rem;
+    width: 100%;
+}
+
+.form-group-input input {
+    border: 1px solid #15982afc;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group-input label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #15982afc;
+    transition: 0.3s;
+    cursor: text;
+}
+
+.form-group-input input:not(:placeholder-shown),
+.form-group-input input:valid:focus {
+    border: 2px solid #15982afc;
+}
+
+.form-group-input input:required {
+    border: 2px solid #15982afc;
+}
+
+.form-group-input input[type="submit"]:valid {
+    border: 2px solid #15982afc !important;
+}
+
+.form-group-input input:invalid:focus {
+    border: 2px solid #bd1717fc;
+    background: url(../assets/box-icon/error.svg) no-repeat right;
+}
+
+.form-group-input input:not(:placeholder-shown)~label,
+.form-group-input input:focus~label {
+    top: 0;
+    left: 0.75rem;
+    color: #15982afc;
+    padding: 0 0.25rem;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+.form-search-button {
+    display: flex;
+    justify-content: end;
+    gap: 0.25rem;
+}
+
+.btn-submit {
+    border: none;
+    outline: none;
+    background-color: #0e5f1cfc;
+    color: #fff;
+    font-weight: 600;
+    float: right;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #15982afc;
+}
+
+.form-check-group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.form-check-group label {
+    color: #15982afc;
+}
+
+.form-check-group input,
+.form-check-group label {
+    cursor: pointer;
+}
+
+.btn-deleted {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    margin: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+    background-color: rgb(184, 5, 5);
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+}
+
+.btn-move {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+    background-color: rgb(40, 173, 62);
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+}
+
+.row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.item-id {
+    gap: 0.25rem;
+    border: 1px solid #94a3b8;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.item-container {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.title-of-book {
+    color: #0b64f4;
+}
+
+.title-of-book span {
+    color: #334155;
+}
+
+.title-of-writer {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.title-action {
+    display: flex;
+    gap: 0.25rem;
+}
+
+@media screen and (max-width: 572px) {
+
+    .book-app,
+    .read-unread-book {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
